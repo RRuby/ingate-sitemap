@@ -1,0 +1,5 @@
+<ul>
+  <% item.subpages.each do |subpage| %>
+    <li><%= link_to subpage, page_path(item.link, subpage: subpage.id) %></li>
+  <% end %>
+</ul>

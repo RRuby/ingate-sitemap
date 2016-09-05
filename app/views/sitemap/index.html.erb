@@ -1,12 +1,8 @@
 <ul>
   <% @menu.each do |item| %>
     <li>
-      <%= link_to item, item.link %>
-      <ul>
-        <% item.subpages.each do |subpage| %>
-        <li><%= link_to subpage, "#{item.link}?id=#{subpage.id}" %></li>
-        <% end %>
-      </ul>
+      <%= link_to item, page_path(item.link) %>
+      <%= render partial: 'pages/subpages', locals: { item: item } %>
     </li>
   <% end %>
 </ul>

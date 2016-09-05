@@ -1,0 +1,11 @@
+<h1><%= @page %></h1>
+
+<% unless @page.is_a?(Subpage) %>
+  <% if @page.subpages.present? %>
+    <%= render partial: 'pages/subpages', locals: { item: @page } %>
+  <% else %>
+    <h6><%= t('empty') %></h6>
+  <% end %>
+<% end %>
+
+<%= link_to t('back'), :back %>
