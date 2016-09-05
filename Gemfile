@@ -12,6 +12,7 @@ group :default do
   gem 'rails',                         '~> 4.2.7.1'
   gem 'russian'
   gem 'sassc-rails',                   '~> 1.3.0'
+  gem 'seed-fu',                       '~> 2.3'
   gem 'simple_form'
   gem 'uglifier',                      '>= 1.3.0'
 end
